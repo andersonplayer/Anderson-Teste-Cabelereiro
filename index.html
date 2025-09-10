@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suellen Ferreira - Virtual Stylist</title>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#111827">
+    <link rel="apple-touch-icon" href="icons/icon-192x192.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --font-sans: 'Inter', sans-serif;
+        --font-serif: 'Cormorant Garamond', serif;
+      }
+      body {
+        font-family: var(--font-sans);
+        background-color: #111827; /* Dark background for consistency */
+      }
+      .font-serif {
+        font-family: var(--font-serif);
+      }
+      @keyframes kenburns-effect {
+        0% { transform: scale(1.1) translate(0, 0); }
+        50% { transform: scale(1.15) translate(-2%, 2%); }
+        100% { transform: scale(1.1) translate(0, 0); }
+      }
+      .animate-kenburns {
+        animation: kenburns-effect 30s ease-in-out infinite;
+      }
+    </style>
+</head>
+<body class="bg-gray-900">
+    <div id="root"></div>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js').then(registration => {
+                    console.log('SW registered: ', registration);
+                }).catch(registrationError => {
+                    console.log('SW registration failed: ', registrationError);
+                });
+            });
+        }
+    </script>
+    <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom/client": "https://aistudiocdn.com/react-dom@^19.1.1/client",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.19.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/"
+  }
+}
+</script>
+    <script type="module" src="index.tsx"></script>
+</body>
+</html>

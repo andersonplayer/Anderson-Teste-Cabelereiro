@@ -1,0 +1,7 @@
+{
+  "name": "Suellen Ferreira - Virtual Stylist",
+  "description": "A Progressive Web App for the Suellen Ferreira beauty salon, allowing clients to preview new hairstyles and colors using AI.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

@@ -275,8 +275,8 @@ const App: React.FC = () => {
     
     const renderLanding = () => (
         <div className="flex flex-col items-center text-center">
-            <h1 className="font-serif text-8xl md:text-9xl font-bold tracking-tight text-white" style={{ textShadow: '3px 3px 20px rgba(0,0,0,0.8)' }}>Suellen Ferreira</h1>
-            <p className="mt-6 text-lg md:text-xl text-gray-200 max-w-xl">Transforme seu visual com apenas um clique!</p>
+            <h1 className="font-serif text-8xl md:text-9xl font-bold tracking-wide text-white" style={{ textShadow: '3px 3px 20px rgba(0,0,0,0.8)' }}>Suellen Ferreira</h1>
+            <p className="mt-6 text-lg md:text-xl text-gray-200 max-w-xl tracking-wider">Transforme seu visual com apenas um clique!</p>
             
             <div className="mt-12 flex flex-col justify-center items-center gap-4 w-full max-w-sm">
                 <button 
@@ -340,11 +340,11 @@ const App: React.FC = () => {
         <div className="bg-black/30 backdrop-blur-xl border border-white/10 rounded-3xl p-6 sm:p-8 shadow-2xl w-full max-w-5xl">
             <div className="w-full flex flex-col lg:flex-row gap-8 lg:gap-12 text-gray-200">
                 <div className="lg:w-1/2 flex-shrink-0">
-                    <h2 className="font-serif text-4xl font-bold mb-4 text-white">Sua Foto</h2>
+                    <h2 className="font-serif text-3xl font-bold mb-4 text-white">Sua Foto</h2>
                     <img src={originalImage!} alt="Sua foto original" className="rounded-2xl shadow-xl w-full" />
                 </div>
                 <div className="lg:w-1/2 flex flex-col">
-                    <h2 className="font-serif text-4xl font-bold mb-6 text-white">Escolha seu novo estilo</h2>
+                    <h2 className="font-serif text-3xl font-bold mb-6 text-white">Escolha seu novo estilo</h2>
                     {error && <p className="bg-red-900/50 text-red-300 p-3 rounded-lg mb-4">{error}</p>}
                     
                     <div className="space-y-4 mb-6">
@@ -433,7 +433,7 @@ const App: React.FC = () => {
     const renderResult = () => (
         <div className="bg-black/30 backdrop-blur-xl border border-white/10 rounded-3xl p-6 sm:p-8 shadow-2xl w-full max-w-6xl">
             <div className="w-full text-gray-200">
-                <h2 className="font-serif text-5xl font-bold mb-2 text-center text-white">Seu Novo Visual!</h2>
+                <h2 className="font-serif text-4xl font-bold mb-2 text-center text-white">Seu Novo Visual!</h2>
                 <p className="text-center text-gray-300 mb-10">Aqui estão as prévias do seu novo estilo.</p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -446,7 +446,7 @@ const App: React.FC = () => {
 
                 {generatedImages.length > 0 && (
                      <div className="mt-16 pt-10 border-t border-white/10 text-center">
-                        <h3 className="font-serif text-4xl font-bold mb-4 text-white">Próximo Passo: Complete a Transformação</h3>
+                        <h3 className="font-serif text-3xl font-bold mb-4 text-white">Próximo Passo: Complete a Transformação</h3>
                         <p className="text-gray-300 mb-6 max-w-2xl mx-auto">Gostou do cabelo? Agora vamos criar um look completo para acompanhar seu novo estilo.</p>
                         
                         {!completeLookImage && (
@@ -463,7 +463,7 @@ const App: React.FC = () => {
                 
                 {completeLookImage && (
                     <div className="mt-12 text-center">
-                         <h3 className="font-serif text-4xl font-bold mb-6 text-white">Seu Look Completo</h3>
+                         <h3 className="font-serif text-3xl font-bold mb-6 text-white">Seu Look Completo</h3>
                          <div className="max-w-md mx-auto">
                             <ImageCard image={completeLookImage} />
                          </div>
